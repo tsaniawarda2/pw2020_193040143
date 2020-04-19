@@ -1,0 +1,15 @@
+img {
+ 		width: 125px;
+ 		border-radius: 5%;
+}
+th {
+	background-color: salmon;
+	font-size: 18px;
+}
+table {
+	background-color: #ffcccc;
+	text-align: center;
+}
+h1 {
+	text-align: center;
+}
