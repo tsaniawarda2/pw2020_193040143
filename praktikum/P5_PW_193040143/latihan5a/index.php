@@ -40,7 +40,7 @@ $result = mysqli_query($conn, "SELECT * FROM buku");
 					<td><?= $row["Judul"] ?></td>
 					<td><?= $row["Penulis"] ?></td>
 					<td><?= $row["Sinopsis"] ?></td>
-					<td><?= $row["Tahun_Terbit"] ?></td>
+					<td><?= $row["Tahun Terbit"] ?></td>
 					<td><?= "Rp." . $row["Harga"] ?></td>
 				</tr>
 				<?php $i++ ?>

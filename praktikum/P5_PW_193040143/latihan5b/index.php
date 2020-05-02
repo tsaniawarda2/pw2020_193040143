@@ -37,7 +37,7 @@ $buku = query("SELECT * FROM buku")
 					<td><?= $daftar["Judul"] ?></td>
 					<td><?= $daftar["Penulis"] ?></td>
 					<td><?= $daftar["Sinopsis"] ?></td>
-					<td><?= $daftar["Tahun_Terbit"] ?></td>
+					<td><?= $daftar["Tahun Terbit"] ?></td>
 					<td><?= "Rp." . $daftar["Harga"] ?></td>
 				</tr>
 				<?php $i++ ?>

@@ -34,7 +34,7 @@ $buku = query("SELECT * FROM buku WHERE No = $No")[0];
 			<p><?= $buku["Judul"] ?></p>
 			<p><?= $buku["Penulis"] ?></p>
 			<p><?= $buku["Sinopsis"] ?></p>
-			<p><?= $buku["Tahun_Terbit"] ?></p>
+			<p><?= $buku["Tahun Terbit"] ?></p>
 			<p><?= "Rp." . $buku["Harga"] ?></p>
 		</div>
 
