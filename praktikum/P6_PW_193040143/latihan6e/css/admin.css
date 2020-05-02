@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'kaushan_scriptregular';
+  src : url(../assets/fonts/kaushanscript-regular-webfont.woff) format('woff'); 
+}
+@font-face {
+  font-family: 'dosismedium';
+  src: url('../assets/fonts/dosis-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'oxaniummedium';
+  src: url('../assets/fonts/oxanium-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+a .ubah{
+  background-color: #339966;
+  color: white;
+}
+a .hapus{
+  background-color: #ff3333;
+  color: white;
+}
+img {
+width: 125px;
+border-radius: 5%;
+}
+th {
+background-color: #9f9fdf;
+font-size: 18px;
+font-family: 'oxaniummedium', arial;
+}
+table {
+margin: auto;
+background-color: #d9d9f2;
+text-align: center;
+font-family: 'dosismedium', arial;
+margin-top: 25px;
+}
+table .sinopsis {
+  width: 250px;
+}
+h1 {
+text-align: center;
+font-size: 50px;
+font-family: 'kaushan_scriptregular', 'ArialNarrow', arial, sans-serif;
+color: #666699;
+}
+h2 {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'kaushan_scriptregular', 'ArialNarrow', arial, sans-serif;
+  color: #666699;
+  margin: auto;
+}
+.add a {
+  margin-left: 87px;
+}
+.add button {
+  width: 100px;
+  height: 50px;
+  border-radius: 10%;
+  font-family: 'Bangers', cursive;
+  font-size: 16px;
+}
+form {
+  float: right;
+  margin-right: 87px;
+}
+form button {
+  width: 50px;
+  height: 25px;
+  border-radius: 10%;
+  font-family: 'Bangers', cursive;
+  font-size: 16px;
+}
