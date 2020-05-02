@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2020 at 09:21 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: May 02, 2020 at 12:27 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -34,7 +33,7 @@ CREATE TABLE `buku` (
   `Judul` varchar(100) NOT NULL,
   `Penulis` varchar(100) NOT NULL,
   `Sinopsis` varchar(1000) NOT NULL,
-  `Tahun Terbit` year(4) NOT NULL,
+  `Tahun_Terbit` year(4) NOT NULL,
   `Harga` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -42,7 +41,7 @@ CREATE TABLE `buku` (
 -- Dumping data for table `buku`
 --
 
-INSERT INTO `buku` (`No`, `Gambar`, `Judul`, `Penulis`, `Sinopsis`, `Tahun Terbit`, `Harga`) VALUES
+INSERT INTO `buku` (`No`, `Gambar`, `Judul`, `Penulis`, `Sinopsis`, `Tahun_Terbit`, `Harga`) VALUES
 (1, 'bumi.jpg', 'Bumi', 'Tere Liye', 'Bumi adalah novel pertama dari serial ini. Menceritakan awal persahabatan ketiga tokoh utama. Diawali oleh kejadian robohnya tiang listrik di belakang sekolah, hingga pertemuan mereka dengan sosok tak terduga yang membawanya ke klan bulan--dunia paralel yang kehidupannya bersisian bumi. Petualangan menegangkan yang membawa kisah baru di kehidupan mereka.', 2014, 92300),
 (2, 'bulan.jpg', 'Bulan', 'Tere Liye', 'Di buku kedua ini mereka melanjutkan petualangannya di dunia paralel. Kali ini klan matahari yang dikunjungi. Mendengar kabar akan hancurnya dunia paralel, mereka melakukan perjalanan politik untuk menyatukan kekuatan klan bulan dan klan matahari. Bersama teman barunya yang berasal dari klan bulan Raib, Ali, dan Seli sangat antusias menyelesaikan urusan diplomatiknya. Akankah mereka berhasil melakukannya?', 2015, 79000),
 (3, 'matahari.jpg', 'Matahari', 'Tere Liye', 'Diawali dengan rasa penasaran Ali si jenius akan dunia paralel. Ia pun mempelajari segala hal yang berhubungan dengan itu. Hingga ia berhasil menemukan teori tentang klan bintang. Dengan ditemani oleh teman baru berwujud pesawat kapsul, perjalanan rahasia mereka yang tak kalah seru dari sebelumnya menjadi lebih menarik.', 2016, 86400),
@@ -73,7 +72,7 @@ ALTER TABLE `buku`
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
