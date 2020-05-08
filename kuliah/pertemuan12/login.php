@@ -1,16 +1,16 @@
 <?php
 session_start();
-require 'functions.php';
-
 if (isset($_SESSION['login'])) {
   header("Location: index.php");
   exit;
 }
+require 'functions.php';
 
 // ketika tombol login ditekan
 if (isset($_POST['login'])) {
   $login = login($_POST);
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ if (isset($_POST['login'])) {
       <li>
         <label>
           Password :
-          <input type="password" name="password" required>
+          <input type="password" name="password" autofocus autocomplete="off" required>
         </label>
       </li>
       <li>
@@ -48,6 +48,7 @@ if (isset($_POST['login'])) {
         <a href="registrasi.php">Tambah user baru</a>
       </li>
     </ul>
+
   </form>
 </body>
 

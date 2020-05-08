@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2020 at 09:44 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: May 08, 2020 at 06:21 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -53,6 +52,27 @@ INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`, `gambar`) VALU
 (9, 'Ong Seong Wu', '193040115', 'onge@gmail.com', 'Ilmu Komunikasi', 'Onge.png'),
 (10, 'Song Kang', '193040116', 'sk@gmail.com', 'Teknik Industri', 'SooKang.png');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(3, 'tsania', '$2y$10$RmxtzUdCr1caX4j4G12E6e5VK.DgN8UQDF7tQeCwp9CXuFUQKrcyq'),
+(4, 'qwerty', '$2y$10$bBZgGgj.fYnc1KGBtpOXl.zWVbk2c6VxXOPGcJduo3YVEgGb2QkGe'),
+(5, 'aqa', '$2y$10$ReDLFjz50teESaA4JkUdGu07H5jIHTMrTUJn2crzJuWDUlM88pZPS');
+
 --
 -- Indexes for dumped tables
 --
@@ -64,6 +84,12 @@ ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -72,6 +98,12 @@ ALTER TABLE `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

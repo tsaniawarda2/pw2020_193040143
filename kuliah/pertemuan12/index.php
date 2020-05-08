@@ -5,7 +5,6 @@ if (!isset($_SESSION['login'])) {
   header("Location: login.php");
   exit;
 }
-
 require 'functions.php';
 $mahasiswa = query("SELECT * FROM mahasiswa");
 

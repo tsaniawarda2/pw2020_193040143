@@ -4,16 +4,15 @@ require 'functions.php';
 if (isset($_POST['registrasi'])) {
   if (registrasi($_POST) > 0) {
     echo "<script>
-          alert('User baru berhasil ditambah. Silahkan login!');
+          alert('user berhasil ditambahkan!');
           document.location.href = 'login.php';
         </script>";
   } else {
-    echo 'User sudah ditambahkan!';
+    echo 'user gagal ditambahkan!';
   }
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,8 +23,7 @@ if (isset($_POST['registrasi'])) {
 </head>
 
 <body>
-  <h3>Form Registrasi Mahasiswa</h3>
-
+  <h3>Form Registrasi</h3>
   <form action="" method="POST">
     <ul>
       <li>
@@ -46,7 +44,9 @@ if (isset($_POST['registrasi'])) {
           <input type="password" name="password2" required>
         </label>
       </li>
-      <li><button type="submit" name="registrasi">Registrasi</button></li>
+      <li>
+        <button type="submit" name="registrasi">Registrasi</button>
+      </li>
     </ul>
   </form>
 </body>
