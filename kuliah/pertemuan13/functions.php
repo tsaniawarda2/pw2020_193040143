@@ -23,6 +23,60 @@ function query($query)
   return $rows;
 }
 
+function upload()
+{
+  $nama_file = $_FILES['gambar']['name'];
+  $tipe_file = $_FILES['gambar']['type'];
+  $ukuran_file = $_FILES['gambar']['size'];
+  $error = $_FILES['gambar']['error'];
+  $tmp_file = $_FILES['gambar']['tmp_name'];
+
+  // ketika tidak ada gambar yang di pilih
+  if ($error == 4) {
+    // echo "<script>
+    //         alert('pilih gambar terlebih dahulu!');
+    //       </script>";
+    return 'nophoto.jpg';
+  }
+
+  // cek ekstensi file
+  $daftar_gambar = ['jpg', 'jpeg', 'png'];
+  $ekstensi_file =  explode('.', $nama_file);
+  $ekstensi_file = strtolower(end($ekstensi_file));
+  if (!in_array($ekstensi_file, $daftar_gambar)) {
+    echo "<script>
+            alert('yang anda pilih bukan gambar!');
+          </script>";
+    return false;
+  }
+
+  // cek tipe file
+  if ($tipe_file != 'image/jpeg' && $tipe_file != 'image/png') {
+    echo "<script>
+            alert('yang anda pilih bukan gambar!');
+          </script>";
+    return false;
+  }
+
+  // cek ukuran file
+  // maks 5Mb = 5000000
+  if ($ukuran_file > 5000000) {
+    echo "<script>
+            alert('ukuran file terlalu besar!');
+          </script>";
+    return false;
+  }
+
+  // lolos pengchekan 
+  // siap upload file
+  // generate nama file baru
+  $nama_file_baru = uniqid();
+  $nama_file_baru .= '.';
+  $nama_file_baru .= $ekstensi_file;
+  move_uploaded_file($tmp_file, 'img/' . $nama_file_baru);
+
+  return $nama_file_baru;
+}
 function tambah($data)
 {
   $conn = koneksi();
@@ -31,7 +85,13 @@ function tambah($data)
   $nrp = htmlspecialchars($data['nrp']);
   $email = htmlspecialchars($data['email']);
   $jurusan = htmlspecialchars($data['jurusan']);
-  $gambar = htmlspecialchars($data['gambar']);
+  // $gambar = htmlspecialchars($data['gambar']);
+
+  // upload gambar
+  $gambar = upload();
+  if (!$gambar) {
+    return false;
+  }
 
   $query = "INSERT INTO
               mahasiswa
@@ -45,6 +105,11 @@ function tambah($data)
 function hapus($id)
 {
   $conn = koneksi();
+  // menghapus gambar di folder img
+  $mhs = query("SELECT * FROM mahasiswa WHERE id = $id");
+  if ($mhs['gambar'] != 'nophoto.jpg') {
+    unlink('img/' . $mhs['gambar']);
+  }
 
   mysqli_query($conn, "DELETE FROM mahasiswa WHERE id = $id") or die(mysqli_error($conn));
   return mysqli_affected_rows($conn);
@@ -58,8 +123,16 @@ function ubah($data)
   $nrp = htmlspecialchars($data['nrp']);
   $email = htmlspecialchars($data['email']);
   $jurusan = htmlspecialchars($data['jurusan']);
-  $gambar = htmlspecialchars($data['gambar']);
+  $gambar_lama = htmlspecialchars($data['gambar_lama']);
 
+  $gambar = upload();
+  if (!$gambar) {
+    return false;
+  }
+
+  if ($gambar == 'nophoto.jpg') {
+    $gambar = $gambar_lama;
+  }
   $query = "UPDATE mahasiswa SET
            nama = '$nama',
            nrp = '$nrp',
@@ -90,6 +163,7 @@ function cari($keyword)
 
   return $rows;
 }
+
 function login($data)
 {
   $conn = koneksi();
@@ -97,21 +171,23 @@ function login($data)
   $username = htmlspecialchars($data['username']);
   $password = htmlspecialchars($data['password']);
 
-  // cek dulu username
-  if ($user = query("SELECT * FROM user WHERE username = '$username'")) {
+  // cek username
+  if ($user = query("SELECT * FROM user WHERE username = '$username' ")) {
     // cek password
-    if (password_verify($password, $data['password'])) {
-      // set session
+    if (password_verify($password, $user['password'])) {
+      //set session
       $_SESSION['login'] = true;
+
       header("Location: index.php");
       exit;
     }
   }
   return [
     'error' => true,
-    'pesan' => 'Username / Password Salah!'
+    'pesan' => 'Username atau Password salah!'
   ];
 }
+
 function registrasi($data)
 {
   $conn = koneksi();
@@ -119,40 +195,42 @@ function registrasi($data)
   $username = htmlspecialchars(strtolower($data['username']));
   $password1 = mysqli_real_escape_string($conn, $data['password1']);
   $password2 = mysqli_real_escape_string($conn, $data['password2']);
-
   // jika username atau password kosong
   if (empty($username) || empty($password1) || empty($password2)) {
     echo "<script>
-          alert('username / password tidak boleh kosong!');
+          alert('Username atau Password tidak boleh kosong!');
           document.location.href = 'registrasi.php';
         </script>";
     return false;
   }
   // jika username sudah ada
-  if (query("SELECT * FROM user WHERE username = '$username'")) {
+  if (query("SELECT * FROM  user WHERE username = '$username'")) {
     echo "<script>
-          alert('username sudah terdaftar!');
+          alert('Username sudah terdaftar!');
           document.location.href = 'registrasi.php';
         </script>";
     return false;
   }
-  // jika konfirmasi passwrd tidak sesuai
+
+  // jika konfirmasi password tidak sesuai
   if ($password1 !== $password2) {
     echo "<script>
-          alert('konfirmasi password tidak sesuai');
-          document.location.href = 'registrasi.php';
+          alert('Konfirmasi password tidak sesuai!');
+          document.location.href = 'registrsi.php';
         </script>";
     return false;
   }
+
   // jika password < 5 digit
   if (strlen($password1) < 5) {
     echo "<script>
-    alert('password terlalu pendek!');
-    document.location.href = 'registrasi.php';
-  </script>";
+            alert('Password terlalu pendek!');
+            document.location.href = 'registrasi.php';
+          </script>";
     return false;
   }
-  // jika username & password sudah sesuai
+
+  // jika username dan password sudah sesuai
   // enkripsi password
   $password_baru = password_hash($password1, PASSWORD_DEFAULT);
   // insert ke tabel user
