@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src : url(../assets/fonts/kaushanscript-regular-webfont.woff) format('woff'); }
+@font-face {
+    font-family: 'edoregular';
+    src: url(../assets/fonts/edo-webfont.woff) format('woff');
+}
+h1 {
+	font-size: 50px;
+	color: #666699;
+	margin: 30px 0px 30px 0px;
+	text-align: center;
+	font-family: 'kaushan_scriptregular', 'ArialNarrow', arial, sans-serif;
+}
+h2 {
+	font-size: 30px;
+	color: black;
+	margin: 30px 0px 30px 0px;
+	text-align: center;
+	font-family: 'kaushan_scriptregular', 'ArialNarrow', arial, sans-serif;
+}
+.container {
+	border: 1px solid white;
+	border-radius: 5%;
+	width: 30%;
+	margin: auto;
+	margin-top: 170px;
+	padding: 10px 0px 10px 0px;
+	background-image: url(../assets/img/buku.png);
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.5);
+    -o-box-shadow: 0 0 10px rgba(0,0,0,.5);
+    -ms-box-shadow:  0 0 10px rgba(0,0,0,.5);
+}
+p {
+	font-family: 'edoregular';
+	text-align: center;
+	font-size: 25px;
+}
+p a {
+	text-decoration: none;
+	transition: .1s;
+	transform: scale(1.1,1.1);
+	display: block;
+	color: black;
+}
+p a:hover {
+	transform: scale(1.5,1.5);
+	display: block;
+	color: black;
+	font-weight: bolder;
+}
+.admin {
+	margin-left: 12%;
+  width: 200px;
+  box-sizing: border-box;
+  float: left;
+}
+.admin button {
+	font-size: 24px;
+	width: 170px;
+	height: 100px;
+	border-radius: 10%;
+	font-family: 'Bangers', cursive;
+}
+.cari {
+  width: 500px;
+  float: right;
+  padding-top: 40px;
+  margin-right: 85px;
+}
+.cari form {
+  float: right;
+}
+.cari form button {
+  width: 50px;
+  height: 25px;
+  border-radius: 10%;
+  font-family: 'Bangers', cursive;
+  font-size: 16px;
+}
+
+/* clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
