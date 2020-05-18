@@ -1,0 +1,185 @@
+body {
+  background-image: url(../assets/img/out/bg.jpg);
+  background-size: 100%;
+}
+.container {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+/* KULIAH */
+.kuliah1 img {
+  width: 120px;
+  height: 120px;
+  border: 5px solid #7070db;
+  box-shadow: 1px 1px 20px rgba(47, 132, 202, 0.637);
+  position: relative;
+}
+.kuliah1 .col img,
+.kuliah1 .col span {
+  border-radius: 20%;
+}
+.kuliah1 .col span {
+  display: block;
+	width: 120px;
+	height: 120px;
+	background-color: rgba(200,200,200,.5); 
+	position: absolute; 
+	top: 140px; 
+	text-align: center; 
+	line-height: 120px; 
+  color: white;
+  font-weight: lighter;
+  font-family: 'Permanent Marker', cursive;
+	text-shadow: 1px 1px 1px #ddd; 
+	opacity: 0; 
+	transform: scale(0) rotate(0);
+	transition: .2s;
+}
+.kuliah1 a:hover span {
+  opacity: 1; 
+  transform: scale(1) rotate(360deg);
+}
+
+.kuliah2 img {
+  width: 120px;
+  height: 120px;
+  border: 5px solid #7070db;
+  box-shadow: 1px 1px 20px rgba(47, 132, 202, 0.637);
+  position: relative;
+}
+.kuliah2 .col img,
+.kuliah2 .col span {
+  border-radius: 20%;
+}
+.kuliah2 .col span {
+  display: block;
+	width: 120px;
+	height: 120px;
+	background-color: rgba(200,200,200,.5); 
+	position: absolute; 
+	top: 48%; 
+	text-align: center; 
+	line-height: 120px; 
+  color: white;
+  font-weight: lighter;
+  font-family: 'Permanent Marker', cursive;
+	text-shadow: 1px 1px 1px #ddd; 
+	opacity: 0; 
+	transform: scale(0) rotate(0);
+	transition: .2s;
+}
+.kuliah2 a:hover span {
+  opacity: 1; 
+  transform: scale(1) rotate(360deg);
+}
+
+/* PRAKTIKUM */
+.praktikum1 img {
+  width: 120px;
+  height: 120px;
+  border: 5px solid #ff6666;
+  box-shadow: 1px 1px 20px rgba(252, 95, 95, 0.658);
+  position: relative;
+}
+.praktikum1 .col img,
+.praktikum1 .col span {
+  border-radius: 50%;
+}
+.praktikum1 .col span {
+  margin-left: 37px;
+  display: block;
+	width: 120px;
+	height: 120px;
+	background-color: rgba(200,200,200,.5); 
+	position: absolute; 
+	top: 555px; 
+	text-align: center; 
+	line-height: 120px; 
+  color: white;
+  font-weight: lighter;
+  font-family: 'Permanent Marker', cursive;
+	text-shadow: 1px 1px 1px #ddd; 
+	opacity: 0; 
+	transform: scale(0) rotate(0);
+	transition: .2s;
+}
+.praktikum1 a:hover span {
+  opacity: 1; 
+  transform: scale(1) rotate(360deg);
+}
+
+.praktikum2 img {
+  width: 120px;
+  height: 120px;
+  border: 5px solid #ff6666;
+  box-shadow: 1px 1px 20px rgba(252, 95, 95, 0.658);
+  position: relative;
+}
+.praktikum2 .col img,
+.praktikum2 .col span {
+  border-radius: 50%;
+}
+.praktikum2 .col span {
+  margin-left: 73px;
+  display: block;
+	width: 120px;
+	height: 120px;
+	background-color: rgba(200,200,200,.5); 
+	position: absolute; 
+	top: 702px; 
+	text-align: center; 
+	line-height: 120px; 
+  color: white;
+  font-weight: lighter;
+  font-family: 'Permanent Marker', cursive;
+	text-shadow: 1px 1px 1px #ddd; 
+	opacity: 0; 
+	transform: scale(0) rotate(0);
+	transition: .2s;
+}
+.praktikum2 a:hover span {
+  opacity: 1; 
+  transform: scale(1) rotate(360deg);
+}
+
+/* tubes */
+.tubes img {
+  width: 120px;
+  height: 120px;
+  border: 5px solid #ffcc00;
+  box-shadow: 1px 1px 20px rgba(255, 235, 52, 0.781);
+  position: relative;
+}
+.tubes .col img,
+.tubes .col span {
+  border-radius: 3%;
+  margin: auto;
+}
+.tubes .col span {
+  margin-left: 361px;
+  display: block;
+	width: 120px;
+	height: 120px;
+	background-color: rgba(200,200,200,.5); 
+	position: absolute; 
+	top: 968px; 
+	text-align: center; 
+	line-height: 120px; 
+  color: white;
+  font-weight: lighter;
+  font-family: 'Permanent Marker', cursive;
+	text-shadow: 1px 1px 1px #ddd; 
+	opacity: 0; 
+	transform: scale(0) rotate(0);
+	transition: .2s;
+}
+.tubes a:hover span {
+  opacity: 1; 
+  transform: scale(1) rotate(360deg);
+}

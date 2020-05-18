@@ -1,0 +1,136 @@
+nav {
+  height: 70px;
+}
+.navbar-fixed img{
+  position: fixed;
+  width: 70px;
+}
+.navbar-fixed li a{
+  font-size: 17px;
+  text-transform: uppercase;
+  font-family: 'Advent Pro', sans-serif;
+  margin-top: 5px;
+}
+.navbar-fixed .btn {
+  margin-top: 3px;
+}
+td img {
+  border-radius: 10px;
+}
+h1 {
+  text-align: center;
+  color: #bdbdbd;
+  font-family: 'Carter One', cursive;
+  margin-top: 20px;
+}
+.collapsible-body {
+  margin-left: 50px;
+}
+.section-search {
+  margin-top: 30px;
+}
+.section-search .input-field input{
+  margin: auto;
+  font-size: 18px;
+  height: 45px;
+  border-radius: 5px;
+}
+.input-field {
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 47px;
+  padding-left: 10px;
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+.content {
+  padding: 20px 70px;
+}
+th {
+  border: 1px solid black;
+  background-color: #9b9b9b;
+  background: rgba(0, 0, 0, .3);
+  text-align: center;
+  font-family: 'Arvo', serif;
+  font-size: 18px;
+}
+td {
+  border: 1px solid black;
+  background: rgba(0, 0, 0, .1);
+  font-family: 'Arvo', serif;
+  text-align: justify;
+  font-size: 13px;
+  padding: 20px;
+}
+h2 {
+  margin-top: 5px;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive; 
+  color: white;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+.background img{
+  width: 100%;
+  height: 100%;
+  opacity: .4;
+}
+.user-view{
+  padding: 40px 0px 10px 30px;
+}
+.user-view img {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+.name {
+  font-family: 'Kalam', cursive;
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+.welcome {
+  font-family: 'Permanent Marker', cursive; 
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+/* Tombol */
+.aksi a {
+  color: white;
+  font-weight: bolder;
+}
+
+.ubah .btn {
+  background-color:  #2e7d32b6;
+  border-radius: 5px;
+  width: 92px;
+}
+.ubah .btn:hover {
+  background-color: #338a38;
+  }
+.hapus .btn {
+  background-color:  #e57373;
+  border-radius: 5px;
+}
+.hapus .btn:hover {
+  background-color: #d32f2f;
+  }
+
+/* PDF */
+@media print {
+  .logout {
+    display: none;
+  }
+  .navbar-fixed {
+    display: none;
+  }
+  .sidenav {
+    display: none;
+  }
+  .section-search {
+    display: none;
+  }
+  .aksi {
+    display: none;
+  }
+}

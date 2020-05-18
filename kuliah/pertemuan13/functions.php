@@ -216,7 +216,7 @@ function registrasi($data)
   if ($password1 !== $password2) {
     echo "<script>
           alert('Konfirmasi password tidak sesuai!');
-          document.location.href = 'registrsi.php';
+          document.location.href = 'registrasi.php';
         </script>";
     return false;
   }

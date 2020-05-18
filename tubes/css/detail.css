@@ -1,0 +1,88 @@
+body {
+  display: block;
+  background-image: url(../assets/img/background.png);
+}
+.card-panel {
+  background: rgba(255, 255, 255, 0.733);
+  border-radius: 20px;
+  margin-top: -5px;
+  margin-bottom: -10px;
+}
+/* Judul */
+h3 {
+  font-size: 50px;
+  font-weight: lighter;
+  margin-top: 3px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+/* Gambar */
+.gambar img {
+  width: 125px;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+  transition: .5s;
+  transform: scale(1.5,1.5);
+  margin-top: 100px;
+}
+.gambar img:hover {
+  transform: scale(1.7,1.7);
+}
+
+/* Penulis */
+h4 {
+  font-family: 'Stylish', sans-serif;
+  font-size: 27px;
+  margin-top: 90px;
+}
+
+/* Keterangan */
+p {
+  margin-top: -5px;
+  text-align: justify;
+  font-family: 'Cambay', sans-serif;
+}
+.sinopsis,
+.tahun,
+.harga {
+  padding: 10px;
+  padding-top: 17px;
+  margin-bottom: -1px;
+  margin: 25px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,.7);
+}
+.sinopsis {
+  margin-top: 15px;
+}
+.tahun p {
+  margin-bottom: -3px;
+}
+.harga {
+  margin-bottom: 9px;
+}
+.harga p{
+  margin-bottom: -3px;
+}
+
+/* Tombol */
+.tombol a{
+  font-family: 'Bangers', cursive;
+  font-size: 16px;
+  width: 20%;
+  margin-top: 20px;
+}
+.btn {
+  background-color:  black;
+  opacity: 0.5;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.719);
+  opacity: 1;
+}

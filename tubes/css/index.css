@@ -1,0 +1,190 @@
+nav {
+  height: 70px;
+}
+.navbar-fixed img{
+  position: fixed;
+  width: 70px;
+}
+.navbar-fixed li a{
+  font-size: 17px;
+  text-transform: uppercase;
+  font-family: 'Advent Pro', sans-serif;
+  margin-top: 5px;
+}
+.navbar-fixed .btn {
+  margin-top: 3px;
+}
+.slider h3,
+.slider h5 {
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+}
+.slider h3 {
+  margin-top: 150px;
+}
+h3 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 50px;
+  font-weight: lighter;
+}
+h5 {
+  font-family: 'Arimo', sans-serif;
+  font-size: 25px;
+  font-weight: lighter;
+}
+/* About */
+.about {
+  margin-top: 100px;
+}
+.about h1 {
+  text-align: center;
+  color: #bdbdbd;
+  font-family: 'Carter One', cursive;
+  margin-top: 60px;
+  font-size: 50px;
+}
+.about h4 {
+  font-size: 15px;
+  font-family: PT Sans;
+  text-align: justify;
+}
+.about img {
+  width: 60%;
+  height: 40%;
+  border-radius: 1%;
+  transition: .5s;
+  transform: scale(1.0,1.0);
+}
+.about img:hover {
+  transform: scale(1.2,1.2);
+}
+
+/* Search */
+.search {
+  margin-top: 70px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+.search .input-filed {
+  width: 100%;
+  height: 35px;
+  padding-left: 10px;
+}
+.search .input-field input{
+  font-size: 18px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+/* Buku */
+.buku{
+  padding-left: 40px;
+  margin-top: 20px;
+}
+.books h1 {
+  text-align: center;
+  color: #bdbdbd;
+  font-family: 'Carter One', cursive;
+}
+.klik {
+  position: relative;
+}
+.gambar {
+  opacity: 1;
+  display: block;
+  width: 50%;
+  height: auto;
+  transition: .3s ease;
+  backface-visibility: hidden;
+}
+.gambar img {
+  width: 145px;
+  height: 210px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.judul h4 {
+  font-size: 18px;
+  margin-top: 15px;
+  font-family: 'Oswald', sans-serif;
+  color: black;
+  font-weight: lighter;
+  padding-left: 10px;
+}
+.penulis h4 {
+  font-size: 13px;
+  margin-top: 0px;
+  font-family: 'Varela Round', sans-serif;
+  padding-left: 10px;
+}
+.tombol {
+  transition: .3s ease;
+  opacity: 0;
+  position: absolute;
+  top: 107px;
+  left: 35px;
+}
+.klik:hover .gambar {
+  opacity: 0.3;
+}
+.klik:hover .tombol {
+  opacity: 1;
+}
+.btn {
+  background-color: grey;
+  color: white;
+  font-size: 12px;
+}
+.btn:hover {
+  background-color: black;
+}
+
+/* Footer */
+footer {
+  padding: 10px 0px;
+  font-size: small;
+  color: grey;
+}
+footer .copy {
+  text-align: center;
+}
+.info {
+  margin-top: 50px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+.info h5 {
+  margin-top: -1px;
+  font-size: 20px;
+}
+.info h6 {
+	font-family: Bebas Neue;
+	font-size: 20px;
+}
+.info p {
+  margin-top: -1px;
+  margin-bottom: 2px;
+  font-size: small;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.aboutus {
+  text-align: justify;
+  margin-right: 30px;
+}
+.bank img {
+  width: 50px;
+  padding-right: 10px; 
+  padding-bottom: 10px;
+  display: inline-block;
+}
+.kirim img {
+  margin: 5px 5px 0px 0px;
+  padding-right: 5px; 
+  padding-bottom: 10px;
+}
+.follow img {
+  margin: 0px 5px 0px 0px;
+  width: 30px;
+}
